@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Court Counter</string>
+    <string name="player_a">Player A</string>
+    <string name="player_b">Player B</string>
+    <string name="names">Names</string>
+    <string name="back">back</string>
 </resources>
+

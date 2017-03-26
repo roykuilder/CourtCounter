@@ -19,8 +19,8 @@
             android:id="@+id/names"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="names"
-            android:textSize="18dp"
+            android:text="@string/names"
+            android:textSize="18sp"
             />
 
         <View
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:onClick="reset"
             android:text="Reset"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
     </LinearLayout>
 
 
@@ -59,7 +59,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
             android:onClick="scoreA"
-            android:text="player a"
+            android:text="@string/player_b"
             android:textSize="18sp" />
 
         <LinearLayout
@@ -86,7 +86,7 @@
                     android:layout_width="175dp"
                     android:layout_height="match_parent"
                     android:paddingRight="8dp"
-                    android:text="Player A"
+                    android:text="@string/player_a"
                     android:textSize="36sp"
                     android:paddingLeft="8dp"/>
 
@@ -94,23 +94,15 @@
                     android:id="@+id/player_a_score"
                     android:layout_width="55dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="8dp"
-                    android:background="#81C784"
-                    android:gravity="end"
-                    android:padding="4dp"
-                    android:text="00"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="36sp" />
+                    style="@style/gameView"
+                    tools:text="00"/>
 
                 <TextView
                     android:id="@+id/set_1_player_a"
                     style="@style/setView"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="0"
-
-                    />
+                    android:text="0" />
 
                 <TextView
                     android:id="@+id/tie_1_player_a"
@@ -160,7 +152,7 @@
                     android:layout_width="175dp"
                     android:layout_height="match_parent"
                     android:paddingRight="8dp"
-                    android:text="Player B"
+                    android:text="@string/player_b"
                     android:textSize="36sp"
                     android:paddingLeft="8dp"/>
 
@@ -168,14 +160,8 @@
                     android:id="@+id/player_b_score"
                     android:layout_width="55dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="8dp"
-                    android:background="#81C784"
-                    android:gravity="end"
-                    android:padding="4dp"
-                    android:text="00"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="36sp" />
+                    style="@style/gameView"
+                    tools:text="00"/>
 
                 <TextView
                     android:id="@+id/set_1_player_b"
@@ -240,14 +226,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="34dp"
             android:onClick="scoreB"
-            android:text="player b"
+            android:text="@string/player_b"
             android:textSize="18sp" />
-
-
     </RelativeLayout>
     </LinearLayout>
-
-
-
-
 </RelativeLayout>
