@@ -18,8 +18,8 @@
             android:id="@+id/name_player_a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Player A"
-            android:textSize="24sp"
+            android:text="@string/player_a"
+            android:textSize="36sp"
             android:background="#F0F4C3"
             android:textAlignment="center"/>
 
@@ -31,16 +31,15 @@
             android:id="@+id/name_player_b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/name_player_a"
-            android:text="Player B"
-            android:textSize="24sp"
+            android:text="@string/player_b"
+            android:textSize="36sp"
             android:background="#F0F4C3"
             android:textAlignment="center"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"/>
+            android:layout_weight="1"/>
 
     </LinearLayout>
 
@@ -54,9 +53,6 @@
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"
-            android:textColor="#FFFFFF" />
-
+            android:text="@string/back" />
     </LinearLayout>
-
 </RelativeLayout>
