@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
     TextView tie2PlayerB;
     TextView tie3PlayerB;
 
+    int breakScoreA = 0;
+    int breakScoreB = 0;
+
     public static String namePlayerA = "Player A";
     public static String namePlayerB = "Player B";
 
@@ -55,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
          * This code is to set the player names from the variable.
          */
 
-        TextView playerA = (TextView) findViewById(R.id.main_player_a);
+        TextView playerA = (TextView) findViewById(R.id.score_button_a);
         playerA.setText(namePlayerA);
-        TextView playerB = (TextView) findViewById(R.id.main_player_b);
+        TextView playerB = (TextView) findViewById(R.id.score_button_b);
         playerB.setText(namePlayerB);
 
         findViewById(R.id.names).setOnClickListener(new View.OnClickListener(){
@@ -328,7 +333,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * These methods are called when the break button is pressed
+     */
 
+    public void breakPlayerA(View view) {
+        breakScoreA++;
+        TextView breakViewA = (TextView) findViewById(R.id.break_score_a);
+        String bScore= Integer.toString(breakScoreA);
+        breakViewA.setText(bScore);
+    }
+
+    public void breakPlayerB(View view) {
+        breakScoreB++;
+        TextView breakViewB = (TextView) findViewById(R.id.break_score_b);
+        String bScore= Integer.toString(breakScoreB);
+        breakViewB.setText(bScore);
+    }
     /**
      * This is the method for the reset button.
      */
@@ -341,6 +362,24 @@ public class MainActivity extends AppCompatActivity {
         setCounter.get(1).scoreReset();
         setCounter.get(2).scoreReset();
         setCounter.get(3).scoreReset();
+        setScoreA=0;
+        setScoreB=0;
+        currentSet=1;
         displayScore();
+        currentSet++;
+        displayScore();
+        currentSet++;
+        displayScore();
+        currentSet=1;
+        breakScoreA = 0;
+        TextView breakViewA = (TextView) findViewById(R.id.break_score_a);
+        String bScore= Integer.toString(breakScoreA);
+        breakViewA.setText(bScore);
+        breakScoreB = 0;
+        TextView breakViewB = (TextView) findViewById(R.id.break_score_b);
+        String breaksB= Integer.toString(breakScoreB);
+        breakViewB.setText(breaksB);
+
+
     }
 }
