@@ -5,28 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.courtcounter.MainActivity"
-    >
+    tools:context="com.example.android.courtcounter.MainActivity">
 
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#43A047"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:background="#43A047">
 
         <Button
             android:id="@+id/names"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/names"
-            android:textSize="18sp"
-            />
+            android:textSize="18sp" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/reset"
@@ -38,196 +36,176 @@
     </LinearLayout>
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_above="@id/bottomBar"
-        >
+        android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F9FBE7"
-       >
-
-        <Button
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
-            android:onClick="scoreA"
-            android:text="@string/player_b"
-            android:textSize="18sp" />
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:background="#F9FBE7">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="6"
-                android:scaleType="centerCrop"
-                android:src="@drawable/tennis_ball_2" />
+            <Button
+                style="@style/score_button"
+                android:onClick="scoreA"
+                android:text="@string/player_b" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#F0F4C3"
-                android:orientation="horizontal"
-                android:padding="4dp">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/main_player_a"
-                    android:layout_width="175dp"
-                    android:layout_height="match_parent"
-                    android:paddingRight="8dp"
-                    android:text="@string/player_a"
-                    android:textSize="36sp"
-                    android:paddingLeft="8dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tennis_ball_2" />
 
-                <TextView
-                    android:id="@+id/player_a_score"
-                    android:layout_width="55dp"
-                    android:layout_height="match_parent"
-                    style="@style/gameView"
-                    tools:text="00"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F0F4C3"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
 
-                <TextView
-                    android:id="@+id/set_1_player_a"
-                    style="@style/setView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="0" />
+                    <TextView
+                        android:id="@+id/main_player_a"
+                        style="@style/player_name"
+                        android:text="@string/player_a" />
 
-                <TextView
-                    android:id="@+id/tie_1_player_a"
-                    style="@style/tieView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/player_a_score"
+                        style="@style/gameView"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        tools:text="00" />
 
-                <TextView
-                    android:id="@+id/set_2_player_a"
-                    style="@style/setView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/set_1_player_a"
+                        style="@style/setView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="0" />
 
-                <TextView
-                    android:id="@+id/tie_2_player_a"
-                    style="@style/tieView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/tie_1_player_a"
+                        style="@style/tieView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
 
-                <TextView
-                    android:id="@+id/set_3_player_a"
-                    style="@style/setView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/set_2_player_a"
+                        style="@style/setView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
 
-                <TextView
-                    android:id="@+id/tie_3_player_a"
-                    style="@style/tieView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/tie_2_player_a"
+                        style="@style/tieView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
 
+                    <TextView
+                        android:id="@+id/set_3_player_a"
+                        style="@style/setView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/tie_3_player_a"
+                        style="@style/tieView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F0F4C3"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/main_player_b"
+                        style="@style/player_name"
+                        android:text="@string/player_b" />
+
+                    <TextView
+                        android:id="@+id/player_b_score"
+                        style="@style/gameView"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        tools:text="00" />
+
+                    <TextView
+                        android:id="@+id/set_1_player_b"
+                        style="@style/setView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/tie_1_player_b"
+                        style="@style/tieView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/set_2_player_b"
+                        style="@style/setView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/tie_2_player_b"
+                        style="@style/tieView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/set_3_player_b"
+                        style="@style/setView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+
+                    <TextView
+                        android:id="@+id/tie_3_player_b"
+                        style="@style/tieView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/racket_focus" />
             </LinearLayout>
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="8dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#F0F4C3"
-                android:orientation="horizontal"
-                android:padding="4dp">
-
-                <TextView
-                    android:id="@+id/main_player_b"
-                    android:layout_width="175dp"
-                    android:layout_height="match_parent"
-                    android:paddingRight="8dp"
-                    android:text="@string/player_b"
-                    android:textSize="36sp"
-                    android:paddingLeft="8dp"/>
-
-                <TextView
-                    android:id="@+id/player_b_score"
-                    android:layout_width="55dp"
-                    android:layout_height="match_parent"
-                    style="@style/gameView"
-                    tools:text="00"/>
-
-                <TextView
-                    android:id="@+id/set_1_player_b"
-                    style="@style/setView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="0" />
-
-                <TextView
-                    android:id="@+id/tie_1_player_b"
-                    style="@style/tieView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
-
-                <TextView
-                    android:id="@+id/set_2_player_b"
-                    style="@style/setView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
-
-                <TextView
-                    android:id="@+id/tie_2_player_b"
-                    style="@style/tieView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
-
-                <TextView
-                    android:id="@+id/set_3_player_b"
-                    style="@style/setView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
-
-
-                <TextView
-                    android:id="@+id/tie_3_player_b"
-                    style="@style/tieView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
-
-            </LinearLayout>
-
-            <ImageView
+                android:id="@+id/spacer"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="6"
-                android:scaleType="centerCrop"
-                android:src="@drawable/racket_focus"/>
-
-        </LinearLayout>
-
-        <View
-            android:id="@+id/spacer"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_alignParentBottom="true"/>
+                android:layout_alignParentBottom="true" />
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/spacer"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="34dp"
-            android:onClick="scoreB"
-            android:text="@string/player_b"
-            android:textSize="18sp" />
-    </RelativeLayout>
+            <Button
+                style="@style/score_button"
+                android:layout_above="@id/spacer"
+                android:layout_marginBottom="34dp"
+                android:onClick="scoreB"
+                android:text="@string/player_b" />
+        </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>

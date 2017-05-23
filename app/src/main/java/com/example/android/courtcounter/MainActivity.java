@@ -206,6 +206,7 @@ public class MainActivity extends AppCompatActivity {
             displayScore();
         } else if (currentGameA == 3 && currentGameB == 4) {
             currentGameB--;
+            displayScore();
         } else if (currentGameA == 4 && currentGameB == 3) {
             currentGameA = 0;
             currentGameB = 0;
@@ -236,6 +237,7 @@ public class MainActivity extends AppCompatActivity {
             displayScore();
         } else if (currentGameB == 3 && currentGameA == 4) {
             currentGameA--;
+            displayScore();
         } else if (currentGameB == 4 && currentGameA == 3) {
             currentGameA = 0;
             currentGameB = 0;
